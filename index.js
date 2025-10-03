@@ -51,7 +51,7 @@ async function fetchDataForAllAuthors() {
 }
 
 async function displayAllAuthors() {
-  const authors = await fetchDataForAllAuthors();
+  const posts = await fetchDataForAllAuthors();
 
   if (posts && posts.length > 0) {
     posts.forEach((post) => {
