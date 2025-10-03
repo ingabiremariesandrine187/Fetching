@@ -51,7 +51,7 @@ async function fetchDataForAllAuthors() {
 }
 
 async function displayAllAuthors() {
-  const posts = await fetchDataForAllAuthors();
+  const authors = await fetchDataForAllAuthors();
 
   if (posts && posts.length > 0) {
     posts.forEach((post) => {
@@ -74,34 +74,34 @@ displayAllAuthors();
 
 //this is the API We are using https://dummyjson.com/products
 
-async function fetchProducts() {
-  try {
-    const response = await fetch(
-      `https://dummyjson.com/products`
-    );
+// async function fetchProducts() {
+//   try {
+//     const response = await fetch(
+//       `https://dummyjson.com/products`
+//     );
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! status: ${response.status}`);
+//     }
 
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log("Error fetching Product data: ", error);
-  }
-}
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.log("Error fetching Product data: ", error);
+//   }
+// }
 
-async function displayAllProducts() {
-  const products = await fetchDataForAllProducts();
+// async function displayAllProducts() {
+//   const products = await fetchDataForAllProducts();
 
-  if (products && products.length > 0) {
-    products.forEach((products) => {
-      console.log("Product id:", products.id);                  
-console.log("Product title:",products.title);
-console.log("product price:",products.price);
-console.log("product availableStatus:",products.availableStatus);")          
-    });
-  } else {
-    console.log("No products found");
-  }
-}
+//   if (products && products.length > 0) {
+//     products.forEach((products) => {
+//       console.log("Product id:", products.id);                  
+// console.log("Product title:",products.title);
+// console.log("product price:",products.price);
+// console.log("product availableStatus:",products.availableStatus);")          
+//     });
+//   } else {
+//     console.log("No products found");
+//   }
+// }
