@@ -32,7 +32,7 @@
     
 
 
-async function fetchDataForAllUsers() {
+async function fetchDataForAllAuthors() {
   try {
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/posts?_embed=comments&_expand=user`
@@ -49,8 +49,8 @@ async function fetchDataForAllUsers() {
   }
 }
 
-async function displayAllUsers() {
-  const posts = await fetchDataForAllUsers();
+async function displayAllAuthors() {
+  const posts = await fetchDataForAllAuthors();
 
   if (posts && posts.length > 0) {
     posts.forEach((post) => {
@@ -66,4 +66,9 @@ async function displayAllUsers() {
   }
 }
 
-displayAllUsers();
+displayAllAuthors();
+
+
+
+
+
