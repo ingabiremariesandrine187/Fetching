@@ -31,6 +31,7 @@
 // displayAllUsers();
     
 
+//question number 1
 
 async function fetchDataForAllAuthors() {
   try {
@@ -45,7 +46,7 @@ async function fetchDataForAllAuthors() {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log("Error fetching user data: ", error);
+    console.log("Error fetching Authors data: ", error);
   }
 }
 
@@ -69,6 +70,24 @@ async function displayAllAuthors() {
 displayAllAuthors();
 
 
+//question 2
 
+//this is the API We are using https://dummyjson.com/products
 
+async function fetchProducts() {
+  try {
+    const response = await fetch(
+      `https://dummyjson.com/products`
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Error fetching Product data: ", error);
+  }
+}
 
