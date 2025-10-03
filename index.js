@@ -91,3 +91,17 @@ async function fetchProducts() {
   }
 }
 
+async function displayAllProducts() {
+  const products = await fetchDataForAllProducts();
+
+  if (products && products.length > 0) {
+    products.forEach((products) => {
+      console.log("Product id:", products.id);                  
+console.log("Product title:",products.title);
+console.log("product price:",products.price);
+console.log("product availableStatus:",products.availableStatus);")          
+    });
+  } else {
+    console.log("No products found");
+  }
+}
